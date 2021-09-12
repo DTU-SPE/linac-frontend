@@ -51,6 +51,15 @@
             <li><code>linac.compute.dtu.dk</code> using <code>http</code></li>
             </ul>
             <p>The service is offered with no guarantees.</p>
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Example data</h1>
+            </div>
+            <p>Here you can find some example data to be used for testing the system:</p>
+            <ul>
+                <li><a :href="'/floorPlan.json'" target="_blank"><code>floorPlan.json</code></a>: an example floor plan</li>
+                <li><a :href="'/activities.json'" target="_blank"><code>activities.json</code></a>: an example simulation code</li>
+            </ul>
         </main>
     </b-row>
 </template>
