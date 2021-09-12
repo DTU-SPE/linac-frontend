@@ -43,6 +43,28 @@
             Continue
           </v-btn>
         </main>
+
+        <b-modal ref="welcome-modal" title="Welcome!" ok-only centered>
+        <p>Welcome to Linac, the Smart Environment Simulator! This tool will allow you to simulate actions performed by agents in an environments equipped with sensors.</p>
+        <p>Here you can find some example data:</p>
+        <ul>
+            <li><a :href="'/floorPlan.json'" target="_blank"><code>floorPlan.json</code></a>: an example floor plan</li>
+            <li><a :href="'/activities.json'" target="_blank"><code>activities.json</code></a>: an example simulation code</li>
+        </ul>
+        <template #modal-footer>
+            <b-button
+              variant="outline-primary"
+              class="float-right"
+              :to="{ name: 'About' }"
+              @click="closeWelcomeModal()"
+            >Read more&hellip;</b-button>
+            <b-button
+              variant="primary"
+              class="float-right"
+              @click="closeWelcomeModal()"
+            >Ok</b-button>
+        </template>
+      </b-modal>
     </b-row>
 </template>
 
@@ -85,6 +107,12 @@ export default {
 
       this.$router.push({ name: "FloorPlan" });
     },
+    closeWelcomeModal() {
+      this.$refs['welcome-modal'].hide();
+    }
   },
+  mounted() {
+    this.$refs['welcome-modal'].show();
+  }
 };
 </script>
