@@ -43,12 +43,14 @@
 
             <p>The source code of this web-application is available at:</p>
             <ul>
-            <li>Backend: <a href="https://github.com/DTU-SPE/linac-backend" target="_blank">https://github.com/DTU-SPE/linac-backend</a></li>
-            <li>Frontend: <a href="https://github.com/DTU-SPE/linac-frontend" target="_blank">https://github.com/DTU-SPE/linac-frontend</a></li>
+                <li>Backend: <a href="https://github.com/DTU-SPE/linac-backend" target="_blank">https://github.com/DTU-SPE/linac-backend</a></li>
+                <li>Frontend: <a href="https://github.com/DTU-SPE/linac-frontend" target="_blank">https://github.com/DTU-SPE/linac-frontend</a></li>
             </ul>
             <p>The documentation for the backend is available as <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/DTU-SPE/linac-backend/main/RestAPI_Documentation.yaml" target="_blank">Swagger YAML file</a>. The API are currently hosted at DTU, and can be accessed at:</p>
             <ul>
-            <li><code>linac.compute.dtu.dk</code> using <code>http</code></li>
+                <li><code>linac.compute.dtu.dk</code> using <code>http</code></li>
+                <li><code>linac-backend-eu1.herokuapp.com</code> using <code>https</code></li>
+                <li><code>linac-backend-eu2.herokuapp.com</code> using <code>https</code></li>
             </ul>
             <p>The service is offered with no guarantees.</p>
 
