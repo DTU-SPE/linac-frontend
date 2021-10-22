@@ -1,19 +1,17 @@
 <template>
     <b-row>
-        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse border-right p-0">
-            <div class="sidebar-sticky pt-3">
-                &nbsp;
-            </div>
-        </nav>
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 pt-3">
-
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Confiuration parameters of the floor plan</h1>
-            </div>
-
-
-          <v-form v-model="isValid">
+      <b-col>
+        <main role="main">
+          <v-card
+            class="mx-auto"
+            max-width="700"
+            outlined
+          >
+          <v-card-title>
+            Configuration parameters of the floor plan
+          </v-card-title>
+          <v-card-text>
+<v-form v-model="isValid">
             <v-text-field
               label="Height"
               v-model="height"
@@ -34,7 +32,8 @@
             ></v-text-field>
           </v-form>
           
-          <v-btn
+            <v-card-actions>
+<v-btn
             outlined
             text
             @click="submitFloorPlanInfo"
@@ -42,8 +41,16 @@
           >
             Continue
           </v-btn>
-        </main>
+            </v-card-actions>
 
+          </v-card-text>
+           
+
+          </v-card>
+
+          
+        </main>
+      </b-col>
         <b-modal ref="welcome-modal" title="Welcome!" ok-only centered>
         <p>Welcome to Linac, the Smart Environment Simulator! This tool allows you to simulate actions performed by agents in an environment equipped with sensors.</p>
         <p>Here you can find some example data:</p>
