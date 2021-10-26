@@ -39,8 +39,19 @@
       </v-list-item>
     </v-card>
 
-    <b-modal id="modal-upload" title="Upload or download the simulation">
+    <b-modal v-model="show" id="modal-upload" title="Upload or download the simulation">
       <UploadDownloadActivities @closeCard="showUploadDownload = false" />
+      <template #modal-footer>
+        <div>
+          <b-button
+            variant="primary"
+            class="float-right"
+            @click="show=false"
+          >
+            Close
+          </b-button>
+        </div>
+      </template>
     </b-modal>
   </div>
 </template>
@@ -64,6 +75,7 @@ export default {
       showUploadDownload: false,
       tooltip: "x-y",
       filterText: this.$store.state.filterText,
+      show: false
     };
   },
   methods: {

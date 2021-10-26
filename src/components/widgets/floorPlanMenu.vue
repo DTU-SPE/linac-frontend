@@ -48,8 +48,19 @@
           </v-list-item>
   </v-card>
 
-    <b-modal id="modal-upload" title="Upload or download the floor plan">
+    <b-modal v-model="show" id="modal-upload" title="Upload or download the floor plan">
       <UploadDownload @closeCard="closeCardRefresh" />
+      <template #modal-footer>
+        <div>
+          <b-button
+            variant="primary"
+            class="float-right"
+            @click="show=false"
+          >
+            Close
+          </b-button>
+        </div>
+      </template>
     </b-modal>
 
   </div>
@@ -107,6 +118,7 @@
         filterText: this.$store.state.filterText,
         showUploadDownload: false,
         tooltip: "x-y",
+        show: false
       };
     },
     methods: {
