@@ -22,9 +22,12 @@
         </v-list-item>
       
       <v-list-item @click="{}" v-b-modal.modal-upload style="clear: both">
+        <v-list-item-icon>
+              <font-awesome-icon icon="upload" />
+            </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>
-              <font-awesome-icon icon="upload" /> Upload / Download
+              Upload / Download
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>

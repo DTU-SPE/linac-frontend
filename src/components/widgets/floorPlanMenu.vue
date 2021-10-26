@@ -19,12 +19,8 @@
 
           <v-list-item v-for="item in itemsInline" :key="item.title" class="float-left"
             @click="executeEvent(item.eventName)">
-            <v-list-item-icon>
-              <font-awesome-icon :icon=item.icon />
-            </v-list-item-icon>
-
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <font-awesome-icon :icon=item.icon />
             </v-list-item-content>
           </v-list-item>
 
